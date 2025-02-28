@@ -1,13 +1,16 @@
+import { Routes } from 'react-router-dom';
 import Weather from './Weather'
 
 
 export default function App() {
   return (
-    <>
-      <Weather />
-    </>
+    <Routes>
+      <Rout path="/" element={<Home />} />
+      <Rout path="/weather" element={<Weather />} />
+      <Rout path="/map" element={<Map />} />
+      <Rout path="/about" element={<About />} />
+    </Routes>
   );
 }
 
-/* Importar todas las paginas y el layout
 
