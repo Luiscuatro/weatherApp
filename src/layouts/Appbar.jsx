@@ -13,6 +13,9 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
+import { Link } from 'react-router-dom'
+
+
 const pages = ['Home', 'Weather', 'Map', 'About'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -87,7 +90,7 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  
+                    <Typography sx={{ textAlign: 'center' }}>{page}</Typography> 
                 </MenuItem>
               ))}
             </Menu>
@@ -115,6 +118,8 @@ function ResponsiveAppBar() {
             {pages.map((page) => (
               <Button
                 key={page}
+                component={Link}
+                to={`/${page.toLowerCase()}`}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
@@ -157,5 +162,3 @@ function ResponsiveAppBar() {
   );
 }
 export default ResponsiveAppBar;
-
-// Linea 89, Link to = '/${page.toLowerCase()}'

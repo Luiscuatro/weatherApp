@@ -1,5 +1,6 @@
 import { Routes } from 'react-router-dom';
-import Weather from './Weather'
+import Weather from './pages/Weather'
+
 
 
 export default function App() {
